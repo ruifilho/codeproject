@@ -1,8 +1,8 @@
 <?php
 
-namespace CodeProject;
+namespace CodeProject\Models;
 
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Foundation\Auth\Entities as Authenticatable;
 
 class User extends Authenticatable
 {
