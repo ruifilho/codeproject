@@ -2,20 +2,20 @@
 /**
  * Created by PhpStorm.
  * User: rui
- * Date: 14/07/16
- * Time: 23:10
+ * Date: 16/07/16
+ * Time: 22:25
  */
 
 namespace CodeProject\Repositories;
 
 
-use CodeProject\Entities\Client;
+use CodeProject\Entities\Project;
 use Prettus\Repository\Eloquent\BaseRepository;
 
-class ClientRepositoryEloquent extends BaseRepository implements ClientRepository
+class ProjectRepositoryEloquent extends BaseRepository implements ProjectRepository
 {
     public function model()
     {
-        return Client::class;
+        return Project::class;
     }
 }

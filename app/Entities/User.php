@@ -1,10 +1,10 @@
 <?php
 
-namespace CodeProject\Models;
+namespace CodeProject\Entities;
 
-use Illuminate\Foundation\Auth\Entities as Authenticatable;
+use Illuminate\Foundation\Auth as Authenticatable;
 
-class User extends Authenticatable
+class User extends Authenticatable\User
 {
     /**
      * The attributes that are mass assignable.

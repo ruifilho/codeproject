@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "dd599719df8ef34e8c78cff4d175f3c6",
-    "content-hash": "07050397d62972e30a6ac3d34ddfaf22",
+    "hash": "ab0a268a02a85aa9e11a82ad011579b0",
+    "content-hash": "7dcf6f848c19ea694df02fdea65975e7",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -848,24 +848,28 @@
         },
         {
             "name": "prettus/laravel-validation",
-            "version": "1.1.4",
+            "version": "dev-develop",
             "source": {
                 "type": "git",
                 "url": "https://github.com/andersao/laravel-validator.git",
-                "reference": "c3501ba6b6312b8e98098783901060c0aff2b29d"
+                "reference": "602132bf39632089bdf447ced8fa9f2ee82a05c3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andersao/laravel-validator/zipball/c3501ba6b6312b8e98098783901060c0aff2b29d",
-                "reference": "c3501ba6b6312b8e98098783901060c0aff2b29d",
+                "url": "https://api.github.com/repos/andersao/laravel-validator/zipball/602132bf39632089bdf447ced8fa9f2ee82a05c3",
+                "reference": "602132bf39632089bdf447ced8fa9f2ee82a05c3",
                 "shasum": ""
             },
             "require": {
-                "illuminate/support": "~5.0|~5.1",
-                "illuminate/validation": "~5.0|~5.1",
-                "php": ">=5.4.0"
+                "illuminate/support": "~5.0|~5.1|~5.2",
+                "illuminate/validation": "~5.0|~5.1|~5.2"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-develop": "1.2-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "Prettus\\Validator\\": "src/Prettus/Validator/"
@@ -875,7 +879,8 @@
             "authors": [
                 {
                     "name": "Anderson Andrade",
-                    "email": "contato@andersonandra.de"
+                    "email": "contato@andersonandra.de",
+                    "role": "Developer"
                 }
             ],
             "description": "Laravel Validation Service",
@@ -884,7 +889,7 @@
                 "service",
                 "validation"
             ],
-            "time": "2015-06-08 23:53:46"
+            "time": "2015-12-24 01:00:40"
         },
         {
             "name": "psr/log",
@@ -3251,9 +3256,18 @@
             "time": "2015-08-24 13:29:44"
         }
     ],
-    "aliases": [],
+    "aliases": [
+        {
+            "alias": "1.1.4",
+            "alias_normalized": "1.1.4.0",
+            "version": "dev-develop",
+            "package": "prettus/laravel-validation"
+        }
+    ],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "prettus/laravel-validation": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
