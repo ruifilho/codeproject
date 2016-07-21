@@ -20,7 +20,7 @@ Route::group(['prefix' => 'client'], function () {
     Route::post('', 'ClientController@store');
     Route::get('/{id}', 'ClientController@show');
     Route::delete('/{id}', 'ClientController@destroy');
-    Route::get('/{id}', 'ClientController@update');
+    Route::put('/{id}', 'ClientController@update');
 });
 
 Route::group(['prefix' => 'project'], function () {
@@ -28,7 +28,5 @@ Route::group(['prefix' => 'project'], function () {
    Route::post('', 'ProjectController@store');
    Route::get('/{id}', 'ProjectController@show');
    Route::delete('/{id}', 'ProjectController@destroy');
-   Route::get('/{id}', 'ProjectController@update');
+   Route::put('/{id}', 'ProjectController@update');
 });
-
-Route::get('project', 'ProjectController@index');

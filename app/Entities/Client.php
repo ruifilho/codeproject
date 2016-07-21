@@ -2,6 +2,7 @@
 
 namespace CodeProject\Entities;
 
+use CodeProject\Repositories\ProjectRepository;
 use Illuminate\Database\Eloquent\Model;
 
 class Client extends Model
@@ -16,6 +17,6 @@ class Client extends Model
     ];
 
     public function projects(){
-        return $this->hasMany(Project::class);
+        return $this->hasMany(ProjectRepository::class);
     }
 }

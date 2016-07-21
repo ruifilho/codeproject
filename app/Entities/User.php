@@ -2,6 +2,7 @@
 
 namespace CodeProject\Entities;
 
+use CodeProject\Repositories\ProjectRepository;
 use Illuminate\Foundation\Auth as Authenticatable;
 
 class User extends Authenticatable\User
@@ -23,4 +24,8 @@ class User extends Authenticatable\User
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function projects(){
+        return $this->hasMany(ProjectRepository::class);
+    }
 }

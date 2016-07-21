@@ -20,7 +20,7 @@ class ProjectController extends Controller
     }
 
     public function index(){
-        echo "teste";
+        return $this->repository->with('users', 'clients')->all();
     }
 
     public function store(Request $request){
@@ -32,11 +32,10 @@ class ProjectController extends Controller
     }
 
     public function destroy($id){
-        return $this->repository->find($id)->delete();
+        $this->repository->find($id)->delete();
     }
 
     public function update(Request $request, $id){
-        $input = $request->all();
-        return $this->service->find($id)->update($input);
+        return $this->service->update($request->all(), $id);
     }
 }

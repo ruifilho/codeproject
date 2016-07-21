@@ -11,7 +11,6 @@ namespace CodeProject\Services;
 
 use CodeProject\Repositories\ClientRepository;
 use CodeProject\Validators\ClientValidator;
-use Illuminate\Contracts\Validation\ValidationException;
 use Prettus\Validator\Exceptions\ValidatorException;
 
 class ClientServices

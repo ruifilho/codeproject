@@ -10,6 +10,7 @@ namespace CodeProject\Services;
 
 
 use CodeProject\Repositories\ProjectRepository;
+use CodeProject\Validators\ProjectValidator;
 use Prettus\Validator\Exceptions\ValidatorException;
 
 class ProjectServices
@@ -17,7 +18,7 @@ class ProjectServices
     protected $repository;
     protected $validator;
 
-    public function __construct(ProjectRepository $repository, ProjectServices $validator)
+    public function __construct(ProjectRepository $repository, ProjectValidator $validator)
     {
         $this->repository = $repository;
         $this->validator = $validator;
