@@ -3,7 +3,7 @@
 namespace CodeProject\Http\Controllers;
 
 use CodeProject\Repositories\ClientRepository;
-use CodeProject\Services\ClientServices;
+use CodeProject\Services\ClientService;
 use Illuminate\Http\Request;
 
 class ClientController extends Controller
@@ -11,7 +11,7 @@ class ClientController extends Controller
     private $repository;
     private $service;
 
-    public function __construct(ClientRepository $repository, ClientServices $service){
+    public function __construct(ClientRepository $repository, ClientService $service){
         $this->repository = $repository;
         $this->service = $service;
     }

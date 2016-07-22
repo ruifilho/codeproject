@@ -23,6 +23,16 @@ Route::group(['prefix' => 'client'], function () {
     Route::put('/{id}', 'ClientController@update');
 });
 
+
+Route::group(['prefix' => 'project/{id}/note'], function() {
+    Route::get('', 'ProjectNoteController@index');
+    Route::post('', 'ProjectNoteController@store');
+    Route::get('/{noteId}', 'ProjectNoteController@show');
+    Route::put('/{noteId}', 'ProjectNoteController@update');
+    Route::delete('/{noteId}', 'ProjectNoteController@destroy');
+});
+
+
 Route::group(['prefix' => 'project'], function () {
    Route::get('', 'ProjectController@index');
    Route::post('', 'ProjectController@store');
@@ -30,3 +40,4 @@ Route::group(['prefix' => 'project'], function () {
    Route::delete('/{id}', 'ProjectController@destroy');
    Route::put('/{id}', 'ProjectController@update');
 });
+

@@ -24,4 +24,8 @@ class Project extends Model
     public function clients(){
         return $this->belongsTo(ClientRepository::class);
     }
+
+    public function notes(){
+        return $this->hasMany(ProjectNote::class);
+    }
 }

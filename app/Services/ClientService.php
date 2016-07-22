@@ -13,7 +13,7 @@ use CodeProject\Repositories\ClientRepository;
 use CodeProject\Validators\ClientValidator;
 use Prettus\Validator\Exceptions\ValidatorException;
 
-class ClientServices
+class ClientService
 {
     protected $repository;
     protected $validator;
