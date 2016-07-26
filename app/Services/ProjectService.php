@@ -11,6 +11,7 @@ namespace CodeProject\Services;
 
 use CodeProject\Repositories\ProjectRepository;
 use CodeProject\Validators\ProjectValidator;
+use Mockery\CountValidator\Exception;
 use Prettus\Validator\Exceptions\ValidatorException;
 
 class ProjectService
@@ -34,6 +35,18 @@ class ProjectService
             $this->validator->with($data)->passesOrFail();
             return $this->repository->create($data);
         } catch (ValidatorException $e){
+            return [
+                'error' => true,
+                'message' => $e->getMessageBag()
+            ];
+        }
+    }
+
+    public function show($id)
+    {
+        try{
+            return $this->repository->find($id);
+        } catch (Exception $e){
             return [
                 'error' => true,
                 'message' => $e->getMessageBag()
