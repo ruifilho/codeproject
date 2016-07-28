@@ -41,6 +41,17 @@ class ClientService
         }
     }
 
+    public function show($id){
+        try{
+            return $this->repository->find($id);
+        } catch (\Exception $e) {
+            return [
+                'error' => true,
+                'message' => 'Nenhum cliente encontrado com o código '.$id
+            ];
+        }
+    }
+
     public function update(array $data, $id){
 
         try{

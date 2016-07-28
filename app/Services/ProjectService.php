@@ -46,10 +46,10 @@ class ProjectService
     {
         try{
             return $this->repository->find($id);
-        } catch (Exception $e){
+        } catch (\Exception $e){
             return [
                 'error' => true,
-                'message' => $e->getMessageBag()
+                'message' => 'Projeto não encontrado com o código '.$id
             ];
         }
     }
