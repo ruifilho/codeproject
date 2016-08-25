@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('app');
 });
 
 Route::post('oauth/access_token', function (){
@@ -31,6 +31,8 @@ Route::group(['middleware'=>'oauth'], function () {
         Route::get('/{id}', 'ProjectNoteController@show');
         Route::put('{id}/note/{noteId}', 'ProjectNoteController@update');
         Route::delete('note/{id}', 'ProjectNoteController@destroy');
+
+        Route::post('{id}/file', 'ProjectFileController@store');
     });
 });
 

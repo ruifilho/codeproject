@@ -28,4 +28,8 @@ class User extends Authenticatable\User
     public function projects(){
         return $this->hasMany(ProjectRepository::class);
     }
+
+    public function members(){
+        return $this->belongsToMany(User::class, 'project_members', 'member_id', 'project_id');
+    } 
 }
